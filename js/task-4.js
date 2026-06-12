@@ -19,14 +19,15 @@
 
 const formEl = document.querySelector('.login-form');
 
-const inputEmailEl = document.querySelector('[type="email"]');
+const inputEmailEl = formEl.elements.email;
 
-const inputPasswordEl = document.querySelector('[type="password"]');
+const inputPasswordEl = formEl.elements.password;
 
 const formSubmitResult = {};
 
 function submitHandler(event) {
   event.preventDefault();
+
   if (inputEmailEl.value.trim() === '' || inputPasswordEl.value.trim() === '') {
     alert('All form fields must be filled in');
   } else {
