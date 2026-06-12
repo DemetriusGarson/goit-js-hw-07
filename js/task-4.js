@@ -25,7 +25,7 @@ const inputPasswordEl = document.querySelector('[type="password"]');
 
 const formSubmitResult = {};
 
-function submitHandler() {
+function submitHandler(event) {
   event.preventDefault();
   if (inputEmailEl.value.trim() === '' || inputPasswordEl.value.trim() === '') {
     alert('All form fields must be filled in');
